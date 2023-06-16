@@ -1,0 +1,9 @@
+***WARNING***
+To clone this repository into a VSCODE directory, type 'git clone '
+
+To download all required necessary Python packages type in terminal 'pip install -r requirements.txt'
+
+System of Forgot Password Email does not work as Google blocks sending emails to an unconfigured email. (See portfolio 'Evaluation' for more information).
+To access the altering of passwords for a user enter: 'http://127.0.0.1:5000/reset-password' as the URL to be redirected to the correct page.
+
+
