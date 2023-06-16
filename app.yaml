@@ -1,6 +1,0 @@
-runtime: python311
-env: standard
-
-handlers: 
-- url: /website/.* 
-  script: index.py
