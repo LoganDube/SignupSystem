@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+    {% block title %}Dashboard{% endblock %}
+    {% block style%}<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/dash_style.css') }}"/>{% endblock %}
+
+{% block content %}
+<!-- Dashboard Information/Welcoming -->
+<h1>Secure All Your Information.
+    <br> 
+    With Ease.
+</h1>
+    <h2>{{ user.name }}, you are now successfully in the website.</h2>
+<!-- Dashboard Information/Welcoming -->
+
+<!-- Note form -->
+    <h1>Enter your information here:</h1>
+    <form method="POST">
+          <div class="note-subject">
+            <input type="text" name="subject" placeholder="Subject">
+          </div>
+          <div class="note-body">
+            <textarea type="text" name="body" oninput="" placeholder="Body"></textarea>
+          </div>
+      </div>
+    
+      <div class="btn-submit">
+        <div class="inner"></div>
+        <button type="submit">Submit reponse</button>
+      </div>
+    </form>
+<!-- Note form -->
+
+<!-- Displaying the note just submitted -->
+<h1>Most recent note:</h1>
+{% for note in user.note %}
+  {% if note == user.note[-1] %}
+    <h2 class="note-subject">{{ note.subject }}</h2><p class="note-date">{{ note.date }}</p>
+    <div class="note-body">{{ note.body }} </div>
+  {% endif %}
+{% endfor %}
+<!-- Displaying the note just submitted -->
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}User Data{% endblock %}
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/user_data_style.css') }}"/>{% endblock %}
+
+{% block  content %}
+<!-- Current User Details -->
+<h1>Update Your Details</h1>
+    <form method="POST">
+        <h2>Current Email Address:</h2>
+        <div class="current-data">{{ user.email }}</div>
+        <h2>Current Name:</h2>
+        <div class="current-data">{{ user.name }}</div>
+        <h2>Current Password: [encrypted]</h2>
+        <div class="current-data">************* <br><p>*Not changeable through this page.</p></div> 
+
+        <h3 class="update">Do you wish to update your data?</h3>
+        <div><a type="submit" id="btn" href="{{ url_for('auth.change_user_data') }}">Change Details</a></div>
+    </form>
+<!-- Current User Details -->
+{% endblock %}

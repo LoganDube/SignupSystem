@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}History{% endblock %}
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/history_style.css') }}"/>{% endblock %}
+
+
+
+{% block content %}
+<h1>History</h1>
+<ul class="note-history" id="note">
+<!-- displaying all user notes -->
+    {% for note in user.note %}
+      <li class="note-list">
+        <button type="btn" class="close-btn">
+          <span class="close" id="close" onClick="deleteNote({{ note.id }})">&times;</span>
+      </button>
+        <h2 class="note-subject">{{ note.subject }}<p class="note-date">{{ note.date }}</p></h2>
+        <p>{{ note.body }}</p>
+
+      </li>
+    {% endfor %}
+<!-- displaying all user notes -->
+</ul>
+<!-- styling for javascript -->
+<script src="{{ url_for('static', filename='delete_button.js')}}"></script>
+{% endblock %}

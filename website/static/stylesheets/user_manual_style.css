@@ -1,0 +1,36 @@
+/* User Manual */
+section#step-by-step {
+    height: 220vh;
+
+}
+
+#step-by-step h1 {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+#step-by-step h2 {
+    font-size: 1em;
+    padding: 10px;
+}
+
+#step-by-step li {
+    font-size: 0.75em;
+    padding: 10px;
+}
+
+#step-by-step p {
+    font-size: 0.5em;
+    padding: 10px;
+}
+
+.continue {
+    padding: 30px;
+    text-align: center;
+}
+
+#btn {
+    text-align: center;
+    font-weight: normal;
+}
+/* User Manual */
