@@ -1,4 +1,5 @@
-***WARNING***
+***NOTICE***
+
 To clone this repository into a VSCODE directory, enter 'git clone https://github.com/vScoped/SignupSystem' into command line.
 
 To download all required necessary Python packages, enter in terminal 'pip install -r requirements.txt'.
@@ -6,4 +7,4 @@ To download all required necessary Python packages, enter in terminal 'pip insta
 System of Forgot Password Email does not work as Google blocks sending emails to an unconfigured email. (See portfolio 'Evaluation' for more information).
 To access the altering of passwords for a user enter: 'http://127.0.0.1:5000/reset-password' as the URL to be redirected to the correct page.
 
-
+Deleting a note does not work for the first note, please submit another note to test correctly.
